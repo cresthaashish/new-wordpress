@@ -2,10 +2,13 @@
 	// Add function for linking css and js file.
 	function first_wordpress(){
 		//Link CSS File
-		wp_enqueue_style( 'firststyle', get_template_directory_uri() .'css/main.css', array(), '1.0.0','all' );
+		wp_enqueue_style( 'mainstyle', get_template_directory_uri() .'/asset/css/main.css', array(), '1.0.0','all' );
+		wp_enqueue_style( 'bootstrapstyle', get_template_directory_uri() .'/asset/css/bootstrap.min.css', array(), '1.0.0','all');
 
 		//Link js File
-		wp_enqueue_script( 'firststyle', get_template_directory_uri() .'css/main.css', array(), '1.0.0','all' );
+		wp_enqueue_script( 'mainscript', get_template_directory_uri() .'/asset/js/main.js', array(), '1.0.0',true );
+		wp_enqueue_script( 'jqueryscript', get_template_directory_uri() .'/asset/js/jquery.min.js', array(), '1.0.0',true );
+		wp_enqueue_script( 'bootstrapscript', get_template_directory_uri() .'/asset/js/bootstrap.min.js', array(), '1.0.0',true );
 	}
 
 
